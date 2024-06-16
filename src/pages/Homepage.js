@@ -53,9 +53,13 @@ const Homepage = () => {
   // **   send   request    **//
   const sendHandler = () => {
     setShow(false);
-    axios.post("/Menu", {
+    axios.post("https://c3dd-1-174-12-172.ngrok-free.app/Menu", {
       product: Product,
       total: total,
+    }).then((response) => {
+      console.log(response);
+    }).catch(err => {
+      console.log(err);
     });
   };
   // **    //   **     //   **//
