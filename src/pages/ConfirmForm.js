@@ -44,7 +44,7 @@ const ModalOverlay = (props) => {
   const ConfirmForm = (props) => {
     return (
       <React.Fragment>
-        {ReactDOM.createPortal(<Backdrop onConfirm={props.onConfirm} />, document.getElementById("form-root"))}
+        {ReactDOM.createPortal(<Backdrop onConfirm={props.onConfirm} />, document.getElementById("root"))}
         {ReactDOM.createPortal(
           <ModalOverlay
             onSetForm={props.onSetForm}
@@ -54,7 +54,7 @@ const ModalOverlay = (props) => {
             price={props.price}
             product={props.product}
           />,
-          document.getElementById("overlay-root"),
+          document.getElementById("root"),
         )}
       </React.Fragment>
     );
